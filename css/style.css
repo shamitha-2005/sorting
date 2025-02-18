@@ -1,0 +1,235 @@
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+nav {
+  background-color: aqua;
+  color:black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 60%;
+      grid-template-columns: 30% 60%;
+  -webkit-column-gap: 10%;
+          column-gap: 10%;
+  padding: 0% 5%;
+}
+
+nav .array-inputs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+  place-content: center;
+  padding: 5% 0%;
+}
+
+nav .array-inputs #a_size {
+  padding: 5% 0%;
+}
+
+nav .array-inputs #a_speed {
+  padding: 5% 0%;
+}
+
+nav .array-inputs #a_generate {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 4% 0% 0% 0%;
+  padding-left: 10%;
+}
+
+nav .array-inputs #a_generate:hover {
+  cursor: pointer;
+}
+
+nav .header_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav .header_right .nav-heading {
+  display: inline-block;
+  font-size: xxx-large;
+  padding: 3% 0%;
+}
+
+nav .header_right .algos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (45%)
+      grid-template-columns: repeat(6, 45%);
+  place-content: center;
+  padding: 2% 0%;
+}
+
+nav .header_right .algos button {
+  background-color: transparent;
+  border:#3b3a3a;
+  color:black;
+  outline: none;
+  padding: 2% 0%;
+  font-size: x-large;
+}
+
+nav .header_right .algos button:hover {
+  background-color:greenyellow;
+  cursor: pointer;
+}
+
+nav .header_right .algos .butt_locked {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+nav .header_right .algos .butt_locked:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+nav .header_right .algos .butt_selected {
+  background-color: pink;
+  color: green;
+}
+
+nav .header_right .algos .butt_selected:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+nav .header_right .algos .butt_unselected:hover {
+  background-color:orange;
+  cursor: pointer;
+}
+
+section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 60% 20%;
+      grid-template-columns: 20% 60% 20%;
+}
+
+section .Complexity_Containers {
+  margin-top: 20%;
+}
+
+section .Complexity_Containers .Pair_Definitions {
+  margin-top: 20%;
+}
+
+section .Complexity_Containers .Pair_Definitions p {
+  display: inline;
+}
+
+section .Complexity_Containers .Pair_Definitions p.Sub_Heading {
+  font-size: medium;
+  text-transform: none;
+}
+
+section #Info_Cont1 {
+  padding: 20% 10%;
+}
+
+section #Info_Cont1 h3 {
+  text-decoration: underline;
+}
+
+section #array_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 70vh;
+}
+
+section #Info_Cont2 {
+  padding: 20% 10%;
+}
+
+section #Info_Cont2 h3 {
+  text-decoration: underline;
+}
+
+.hide {
+  display: none;
+}
+@media (max-width: 480px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5%;
+  }
+  
+  nav .array-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  nav .header_right .nav-heading {
+    font-size: xx-large;
+  }
+  
+  nav .header_right .algos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+  
+  section {
+    grid-template-columns: 100%;
+  }
+  
+  section #array_container {
+    height: 50vh;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1250px) {
+  nav {
+    grid-template-columns: 40% 50%;
+    column-gap: 5%;
+  }
+  
+  nav .array-inputs {
+    grid-template-columns: 50% 50%;
+  }
+  
+  nav .header_right .algos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  section {
+    grid-template-columns: 15% 70% 15%;
+  }
+  
+  section #array_container {
+    height: 60vh;
+  }
+}
+
+@media (min-width: 1251px) {
+  nav {
+    grid-template-columns: 30% 60%;
+  }
+  
+  nav .header_right .algos {
+    grid-template-columns: repeat(6, 20%);
+  }
+  
+  section {
+    grid-template-columns: 20% 60% 20%;
+  }
+}
